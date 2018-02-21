@@ -33,16 +33,39 @@
 
 // console.log(food.meals[3]);
 
+// const people = [{
+//     name: 'Bianca',
+//     jobTitle: 'student',
+// },{
+//     name: 'Ray',
+//     jobTitle: 'student',
+// },{
+//     name: 'Chewie',
+//     jobTitle: 'Basketball Player',
+// }];
+// for(let i = 0; i < people.length; i++){
+//     console.log(`${people[i].name} ${people[i].jobTitle}`);
+// }
+
 const people = [{
     name: 'Bianca',
     jobTitle: 'student',
+    boss: 'Chewie',
 },{
     name: 'Ray',
     jobTitle: 'student',
+    boss: 'Chewie'
 },{
     name: 'Chewie',
-    jobTitle: 'Basketball Player',
+    jobTitle: 'Boss',
+    boss: 'none',
 }];
 for(let i = 0; i < people.length; i++){
-    console.log(`${people[i].name} ${people[i].jobTitle}`);
+    if(people[i].boss === 'Chewie'){
+        console.log(`${people[i].jobTitle} ${people[i].name} reports to ${people[i].boss}`);
+    }
+    if(people[i].boss === 'none'){
+        console.log(`${people[i].jobTitle} ${people[i].name} doesn't report to anybody.`);
+    }
 }
+
