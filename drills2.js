@@ -27,14 +27,15 @@ function findById(items, idNum){
     }
 }
 
-function validateKeys(object, expectedKeys){
-    for(let i = 0; i < object.length; i++){
-        if(expectedKeys.length !== Object.keys(object).length){
-            return false;
-        }
-         if(!Object.keys(object).find(key => key === expectedKeys[i])){
-            return false;
-        }
+function validateKeys(object, expectedKeys) {
+    if (Object.keys(object).length !== expectedKeys.length) {
+      return false;
     }
+    for (let i = 0; i < expectedKeys.length; i++) {
+      if (!Object.keys(object).find(key => key === expectedKeys[i])) {
+        return false;
+      }
+    }
+
     return true;
-}
+  }
