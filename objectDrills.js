@@ -131,3 +131,46 @@
 
 // console.log(decodeWords('craft block argon meter bells brown croon droop'));
 
+
+const characters = [
+    createCharacter('Gandalf the White', 'gandalph', 'Wizard', 'Middle Earth', 10, 6),
+    createCharacter('Bilbo Baggins', 'bilbo', 'Hobbit', 'The Shire', 2, 1),
+    createCharacter('Frodo Baggins', 'frodo', 'Hobbit', 'The Shire', 3, 2),
+    createCharacter('Aragorn son of Arathorn', 'aragorn', 'Man', 'Dunnedain', 6, 8),
+    createCharacter('Legolas', 'legolas', 'Elf', 'Woodland Realm', 8, 5),
+    createCharacter('Chewbacca', 'chewie', 'Yorkie', 'South Korea', 10, 10),
+    createCharacter('Arwen Undomiel', 'Ar', 'Half-Elf', 'Rivendell', 1, 1)
+];
+
+function createCharacter(name, nickname, race, origin, attack, defense) {
+    return {
+        name: name,
+        nickname: nickname,
+        race: race,
+        origin: origin,
+        attack: attack,
+        defense: defense,
+
+        describe: function() {
+            console.log(`${this.name} is a ${this.race} from ${this.origin}.`);
+        },
+        evaluateFight: function(character) {
+           let x = this.attack - character.defense;
+           let y = character.attack - this.defense;
+
+           console.log(`You opponent takes ${x} damage and you receive ${y} damage`);
+        }
+
+    }
+    
+    }
+}
+
+const Aragorn = characters.find(character => character.nickname === 'aragorn');
+    Aragorn.describe();
+
+const hobbits = characters.filter(character => character.race === 'Hobbit');
+
+const strong = characters.filter(character => character.attack > 5);
+
+
