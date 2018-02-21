@@ -27,8 +27,22 @@
 
 
 
-const food = {
-    meals: ['breakfast', 'second breakfast', 'elevenses', 'lunch', 'afternoon tea', 'dinner', 'supper']
-};
+// const food = {
+//     meals: ['breakfast', 'second breakfast', 'elevenses', 'lunch', 'afternoon tea', 'dinner', 'supper']
+// };
 
-console.log(food.meals[3]);
+// console.log(food.meals[3]);
+
+const people = [{
+    name: 'Bianca',
+    jobTitle: 'student',
+},{
+    name: 'Ray',
+    jobTitle: 'student',
+},{
+    name: 'Chewie',
+    jobTitle: 'Basketball Player',
+}];
+for(let i = 0; i < people.length; i++){
+    console.log(`${people[i].name} ${people[i].jobTitle}`);
+}
