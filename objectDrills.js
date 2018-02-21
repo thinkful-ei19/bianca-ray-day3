@@ -47,25 +47,26 @@
 //     console.log(`${people[i].name} ${people[i].jobTitle}`);
 // }
 
-const people = [{
-    name: 'Bianca',
-    jobTitle: 'student',
-    boss: 'Chewie',
-},{
-    name: 'Ray',
-    jobTitle: 'student',
-    boss: 'Chewie'
-},{
-    name: 'Chewie',
-    jobTitle: 'Boss',
-    boss: 'none',
-}];
-for(let i = 0; i < people.length; i++){
-    if(people[i].boss === 'Chewie'){
-        console.log(`${people[i].jobTitle} ${people[i].name} reports to ${people[i].boss}`);
-    }
-    if(people[i].boss === 'none'){
-        console.log(`${people[i].jobTitle} ${people[i].name} doesn't report to anybody.`);
-    }
-}
+// const people = [{
+//     name: 'Bianca',
+//     jobTitle: 'student',
+//     boss: 'Chewie',
+// },{
+//     name: 'Ray',
+//     jobTitle: 'student',
+//     boss: 'Chewie'
+// },{
+//     name: 'Chewie',
+//     jobTitle: 'Boss',
+//     boss: 'none',
+// }];
+// for(let i = 0; i < people.length; i++){
+//     if(people[i].boss === 'Chewie'){
+//         console.log(`${people[i].jobTitle} ${people[i].name} reports to ${people[i].boss}`);
+//     }
+//     if(people[i].boss === 'none'){
+//         console.log(`${people[i].jobTitle} ${people[i].name} doesn't report to anybody.`);
+//     }
+// }
+
 
